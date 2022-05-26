@@ -1,0 +1,94 @@
+For the natural language processing done by the human brain, see Language processing in the brain.
+Natural language processing (NLP) is a subfield of linguistics, computer science, and artificial intelligence concerned with the interactions between computers and human language, in particular how to program computers to process and analyze large amounts of natural language data.
+The premise of symbolic NLP is well-summarized by John Searle's Chinese room experiment: Given a collection of rules (e.g., a Chinese phrasebook, with questions and matching answers), the computer emulates natural language understanding (or other NLP tasks) by applying those rules to the data it confronts.
+Little further research in machine translation was conducted until the late 1980s when the first statistical machine translation systems were developed.
+1960s: Some notably successful natural language processing systems developed in the 1960s were SHRDLU, a natural language system working in restricted "blocks worlds" with restricted vocabularies, and ELIZA, a simulation of a Rogerian psychotherapist, written by Joseph Weizenbaum between 1964 and 1966.
+Focus areas of the time included research on rule-based parsing (e.g., the development of HPSG as a computational operationalization of generative grammar), morphology (e.g., two-level morphology[3]), semantics (e.g., Lesk algorithm), reference (e.g., within Centering Theory[4]) and other areas of natural language understanding (e.g., in the Rhetorical Structure Theory).
+Up to the 1980s, most natural language processing systems were based on complex sets of hand-written rules.
+Starting in the late 1980s, however, there was a revolution in natural language processing with the introduction of machine learning algorithms for language processing.
+transformational grammar), whose theoretical underpinnings discouraged the sort of corpus linguistics that underlies the machine-learning approach to language processing.
+1990s: Many of the notable early successes on statistical methods in NLP occurred in the field of machine translation, due especially to work at IBM Research.
+These systems were able to take advantage of existing multilingual textual corpora that had been produced by the Parliament of Canada and the European Union as a result of laws calling for the translation of all governmental proceedings into all official languages of the corresponding systems of government.
+However, most other systems depended on corpora specifically developed for the tasks implemented by these systems, which was (and often continues to be) a major limitation in the success of these systems.
+Generally, this task is much more difficult than supervised learning, and typically produces less accurate results for a given amount of input data.
+In the 2010s, representation learning and deep neural network-style machine learning methods became widespread in natural language processing.
+That popularity was due partly to a flurry of results showing that such techniques[7][8] can achieve state-of-the-art results in many natural language tasks, e.g., in language modeling[9] and parsing.
+In the early days, many language-processing systems were designed by symbolic methods, i.e., the hand-coding of a set of rules, coupled with a dictionary lookup:[13][14] such as by writing grammars or devising heuristic rules for stemming.
+The learning procedures used during machine learning automatically focus on the most common cases, whereas when writing rules by hand it is often not at all obvious where the effort should be directed.
+Automatic learning procedures can make use of statistical inference algorithms to produce models that are robust to unfamiliar input (e.g.
+Generally, handling such input gracefully with handwritten rules, or, more generally, creating systems of handwritten rules that make soft decisions, is extremely difficult, error-prone and time-consuming.
+Systems based on automatically learning the rules can be made more accurate simply by supplying more input data.
+However, systems based on handwritten rules can only be made more accurate by increasing the complexity of the rules, which is a much more difficult task.
+In particular, there is a limit to the complexity of systems based on handwritten rules, beyond which the systems become more and more unmanageable.
+However, creating more data to input to machine-learning systems simply requires a corresponding increase in the number of man-hours worked, generally without significant increases in the complexity of the annotation process.
+Despite the popularity of machine learning in NLP research, symbolic methods are still (2020) commonly used:
+when the amount of training data is insufficient to successfully apply machine learning methods, e.g., for the machine translation of low-resource languages such as provided by the Apertium system,
+Since the so-called "statistical revolution"[15][16] in the late 1980s and mid-1990s, much natural language processing research has relied heavily on machine learning.
+The machine-learning paradigm calls instead for using statistical inference to automatically learn such rules through the analysis of large corpora (the plural form of corpus, is a set of documents, possibly with human or computer annotations) of typical real-world examples.
+Increasingly, however, research has focused on statistical models, which make soft, probabilistic decisions based on attaching real-valued weights to each input feature (complex-valued embeddings,[17] and neural networks in general have also been proposed, for e.g.
+Some of the earliest-used machine learning algorithms, such as decision trees, produced systems of hard if-then rules similar to existing hand-written rules.
+However, part-of-speech tagging introduced the use of hidden Markov models to natural language processing, and increasingly, research has focused on statistical models, which make soft, probabilistic decisions based on attaching real-valued weights to the features making up the input data.
+The cache language models upon which many speech recognition systems now rely are examples of such statistical models.
+Such models are generally more robust when given unfamiliar input, especially input that contains errors (as is very common for real-world data), and produce more reliable results when integrated into a larger system comprising multiple subtasks.
+Since the neural turn, statistical methods in NLP research have been largely replaced by neural networks.
+Since 2015,[19] the field has thus largely abandoned statistical methods and shifted to neural networks for machine learning.
+Popular techniques include the use of word embeddings to capture semantic properties of words, and an increase in end-to-end learning of a higher-level task (e.g., question answering) instead of relying on a pipeline of separate intermediate tasks (e.g., part-of-speech tagging and dependency parsing).
+In some areas, this shift has entailed substantial changes in how NLP systems are designed, such that deep neural network-based approaches may be viewed as a new paradigm distinct from statistical natural language processing.
+For instance, the term neural machine translation (NMT) emphasizes the fact that deep learning-based approaches to machine translation directly learn sequence-to-sequence transformations, obviating the need for intermediate steps such as word alignment and language modeling that was used in statistical machine translation (SMT).
+The following is a list of some of the most commonly researched tasks in natural language processing.
+Though natural language processing tasks are closely intertwined, they can be subdivided into categories for convenience.
+In natural speech there are hardly any pauses between successive words, and thus speech segmentation is a necessary subtask of speech recognition (see below).
+Also, given that words in the same language are spoken by people with different accents, the speech recognition software must be able to recognize the wide variety of input as being identical to each other in terms of its textual equivalent.
+However, some written languages like Chinese, Japanese and Thai do not mark word boundaries in such a fashion, and in those languages text segmentation is a significant task requiring knowledge of the vocabulary and morphology of words in the language.
+The grammar for natural languages is ambiguous and typical sentences have multiple possible analyses: perhaps surprisingly, for a typical sentence there may be thousands of potential parses (most of which will seem completely nonsensical to a human).
+Dependency parsing focuses on the relationships between words in a sentence (marking things like primary objects and predicates), whereas constituency parsing focuses on building out the parse tree using a probabilistic context-free grammar (PCFG) (see also stochastic grammar).
+Given a stream of text, determine which items in the text map to proper names, such as people or places, and what the type of each such name is (e.g.
+Given a piece of text (typically a sentence), produce a formal representation of its semantics, either as a graph (e.g., in AMR parsing) or in accordance with a logical formalism (e.g., in DRT parsing).
+This challenge typically includes aspects of several more elementary NLP tasks from semantics (e.g., semantic role labelling, word-sense disambiguation) and can be extended to include full-fledged discourse analysis (e.g., discourse analysis, coreference; see Natural language understanding below).
+Given a single sentence, identify and disambiguate semantic predicates (e.g., verbal frames), then identify and classify the frame elements (semantic roles).
+Given a sentence or larger chunk of text, determine which words ("mentions") refer to the same objects ("entities").
+For example, in a sentence such as "He entered John's house through the front door", "the front door" is a referring expression and the bridging relationship to be identified is the fact that the door being referred to is the front door of John's house (rather than of some other structure that might also be referred to).
+One task is discourse parsing, i.e., identifying the discourse structure of a connected text, i.e.
+Given a single sentence, identify and disambiguate semantic predicates (e.g., verbal frames) and their explicit semantic roles in the current sentence (see Semantic role labelling above).
+Then, identify semantic roles that are not explicitly realized in the current sentence, classify them into arguments that are explicitly realized elsewhere in the text and those that are not specified, and resolve the former against the local text.
+The goal of argument mining is the automatic extraction and identification of argumentative structures from natural language text with the aid of computer programs.
+Not an NLP task proper but an extension of natural language generation and other NLP tasks is the creation of full-fledged books.
+A Document AI platform sits on top of the NLP technology enabling users with no prior experience of artificial intelligence, machine learning or NLP to quickly train a computer to extract the specific data they need from different document types.
+[31][32][33] As far as orthography, morphology, syntax and certain aspects of semantics are concerned, and due to the development of powerful neural language models such as GPT-2, this can now (2019) be considered a largely solved problem and is being marketed in various commercial applications.
+Natural language understanding involves the identification of the intended semantic from the multiple possible semantics which can be derived from a natural language expression which usually takes the form of organized notations of natural language concepts.
+An explicit formalization of natural language semantics without confusions with implicit assumptions such as closed-world assumption (CWA) vs. open-world assumption, or subjective Yes/No vs. objective True/False is expected for the construction of a basis of semantics formalization.
+Interest on increasingly abstract, "cognitive" aspects of natural language (1999-2001: shallow parsing, 2002-03: named entity recognition, 2006-09/2017-18: dependency syntax, 2004-05/2008-09 semantic role labelling, 2011-12 coreference, 2015-16: discourse parsing, 2019: semantic parsing).
+Increasing interest in multilinguality, and, potentially, multimodality (English since 1999; Spanish, Dutch since 2002; German since 2003; Bulgarian, Danish, Japanese, Portuguese, Slovenian, Swedish, Turkish since 2006; Basque, Catalan, Chinese, Greek, Hungarian, Italian, Turkish since 2007; Czech since 2009; Arabic since 2012; 2017: 40+ languages; 2018: 60+/100+ languages)
+Elimination of symbolic representations (rule-based over supervised towards weakly supervised methods, representation learning and end-to-end systems)
+Most higher-level NLP applications involve aspects that emulate intelligent behaviour and apparent comprehension of natural language.
+More broadly speaking, the technical operationalization of increasingly advanced aspects of cognitive behaviour represents one of the developmental trajectories of NLP (see trends among CoNLL shared tasks above).
+[37] Cognitive linguistics is an interdisciplinary branch of linguistics, combining knowledge and research from both psychology and linguistics.
+[38] Especially during the age of symbolic NLP, the area of computational linguistics maintained strong ties with cognitive studies.
+As an example, George Lakoff offers a methodology to build natural language processing (NLP) algorithms through the perspective of cognitive science, along with the findings of cognitive linguistics,[39] with two defining aspects:
+The intent behind other usages, like in "She is a big person" will remain somewhat ambiguous to a person and a cognitive NLP algorithm alike without additional information.
+Assign relative measures of meaning to a word, phrase, sentence or piece of text based on the information presented before and after the piece of text being analyzed, e.g., by means of a probabilistic context-free grammar (PCFG).
+Ties with cognitive linguistics are part of the historical heritage of NLP, but they have been less frequently addressed since the statistical turn during the 1990s.
+Nevertheless, approaches to develop cognitive models towards technically operationalizable frameworks have been pursued in the context of various frameworks, e.g., of cognitive grammar,[41] functional grammar,[42] construction grammar,[43] computational psycholinguistics and cognitive neuroscience (e.g., ACT-R), however, with limited uptake in mainstream NLP (as measured by presence on major conferences[44] of the ACL).
+More recently, ideas of cognitive NLP have been revived as an approach to achieve explainability, e.g., under the notion of "cognitive AI".
+[45] Likewise, ideas of cognitive NLP are inherent to neural models multimodal NLP (although rarely made explicit).
+"Evaluation of natural language processing systems: Issues and approaches".
+^ Chomskyan linguistics encourages the investigation of "corner cases" that stress the limits of its theoretical models (comparable to pathological phenomena in mathematics), typically created using thought experiments, rather than the systematic investigation of typical phenomena that occur in real-world data, as is the case in corpus linguistics.
+The creation and use of such corpora of real-world data is a fundamental part of machine-learning algorithms for natural language processing.
+In addition, theoretical underpinnings of Chomskyan linguistics such as the so-called "poverty of the stimulus" argument entail that general learning algorithms, as are typically used in machine learning, cannot be successful in language processing.
+As a result, the Chomskyan paradigm discouraged the application of such models to language processing.
+"A Primer on Neural Network Models for Natural Language Processing".
+^ Jozefowicz, Rafal; Vinyals, Oriol; Schuster, Mike; Shazeer, Noam; Wu, Yonghui (2016).
+This was an early Deep Learning tutorial at the ACL 2012 and met with both interest and (at the time) skepticism by most participants.
+Until 2015, deep learning had evolved into the major framework of NLP.
+Proceedings of the 3rd Workshop on South and Southeast Asian Natural Language Processing (SANLP).
+Cognitive science is an interdisciplinary field of researchers from Linguistics, psychology, neuroscience, philosophy, computer science, and anthropology that seek to understand the mind.
+Handbook of Cognitive Linguistics and Second Language Acquisition.
+Philosophy in the Flesh: The Embodied Mind and Its Challenge to Western Philosophy; Appendix: The Neural Theory of Language Paradigm.
+Speech and Language Processing, 2nd edition.
+Mohamed Zakaria Kurdi (2016).
+Natural Language Processing and Computational Linguistics: speech, morphology, and syntax, Volume 1.
+Natural Language Processing and Computational Linguistics: semantics, discourse, and applications, Volume 2.
+Christopher D. Manning and Hinrich Schütze (1999).
+Foundations of Statistical Natural Language Processing.
+David M. W. Powers and Christopher C. R. Turk (1989).
+Machine Learning of Natural Language.
